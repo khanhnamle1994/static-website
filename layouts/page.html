@@ -1,0 +1,16 @@
+{{> header }}
+  <main id="main">
+    <div class="page-hero" style="background-image: url('{{ page.metafield.hero.imgix_url }}');">
+      <div class="overlay"></div>
+      <div class="page-title text-center">
+        <h1>{{ title }}</h1>
+      </div>
+    </div>
+    <div class="page-content container">
+      <h2>{{ page.metafield.headline.value }}</h2>
+      <div class="content">
+        {{{ page.content }}}
+      </div>
+    </div>
+  </main>
+{{> footer }}
