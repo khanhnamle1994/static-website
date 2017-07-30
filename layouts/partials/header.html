@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ title }} | {{ cosmic.object.header.metafield.site_title.value }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="/css/css-helpers.css" rel="stylesheet">
+  <link href="/css/font-awesome.css" rel="stylesheet">
+  <link href="/css/pushy.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/prism.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="{{ cosmic.object.header.metafield.favicon_32.imgix_url }}" sizes="32x32" />
+  <link rel="icon" type="image/png" href="{{ cosmic.object.header.metafield.favicon_16.imgix_url }}" sizes="16x16" />
+</head>
+<body>
+  <header id="header">
+    <nav class="navbar navbar-inverse">
+      <div>
+        <a class="navbar-brand pull-left" href="/">{{ cosmic.object.header.metafield.site_title.value }}</a>
+        <div class="pull-right menu-btn">&#9776; Menu</div>
+      </div><!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Pushy Menu -->
+  <nav class="pushy pushy-right text-center">
+    <ul>
+      <li class="pushy-link">
+        <a class="menu-close" href="#">&times;</a>
+      </li>
+      {{# cosmic.object.header.metadata.nav_links }}
+        <li><a href="{{ link }}">{{ title }}</a></li>
+      {{/ cosmic.object.header.metadata.nav_links }}
+    </ul>
+    <div class="mb-20 ml-10">
+      {{# cosmic.object.footer.metadata.github }}
+        <a class="mr-10" href="{{ . }}" target="_blank">
+          <i class="fa fa-github social-icon"></i>
+        </a>
+      {{/ cosmic.object.footer.metadata.github }}
+      {{# cosmic.object.footer.metadata.twitter }}
+        <a class="mr-10" href="{{ . }}" target="_blank">
+          <i class="fa fa-twitter social-icon"></i>
+        </a>
+      {{/ cosmic.object.footer.metadata.twitter }}
+    </div>
+  </nav>
+  <div class="site-overlay"></div>
